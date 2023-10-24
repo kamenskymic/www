@@ -36,10 +36,22 @@ $body-family: 'Ubuntu', 'Nunito Sans', Calibri, Verdana, Segoe, Arial, sans-seri
 }
 
 // Make logo in navbar slightly bigger (in header.html)
+// This effectively sets the height of the top menubar
+// (See next item)
 .navbar-item-logo img {
     max-height: 2.5rem;
 }
 
+// Since the menubar is fixed, we need to add a margin when we jump/internal link to the 
+// h3 headings, for example when using a table of contents. Otherwise the jumped to heading
+// will be covered by the menu bar.
+h3 {
+	scroll-margin-top: 2.5em;
+}
+
+// Without this, the modal will go wider than a mobile screen.
+// Plus at the same time we override the previously transparent
+// background colour
 .modal-content-narrower {
 	max-width: 500px;
 	background-color: #FFFFFF;

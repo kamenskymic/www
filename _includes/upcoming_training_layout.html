@@ -1,0 +1,51 @@
+{% assign showcase = site.data.["events_showcase"].items | sort:"dateval" %}
+
+{% for item in showcase %}
+
+    
+    {% if item.course_name  %}
+
+        {% assign to_show = false %}
+    
+        {% if item.course_name == page.show_course %}
+            {% assign to_show = true %}
+        {% endif %} 
+        {% if page.show_course == "all" %}
+            {% assign to_show = true %}
+        {% endif %}     
+
+        {% assign today_date = 'now' | date: '%s' %}
+        {% assign event_date = item.dateval | date: '%s' %}
+
+        {% if event_date < today_date %}
+            {% assign to_show = false %}
+        {% endif %}
+
+        {% if to_show == true %}
+
+            {% assign event_date = item.dateval | date: "%B %d, %Y" %}
+            {% if item.date %}
+                {% if item.year %}
+                    {% assign event_date = {{item.date}} | append: ", " | append: {{item.year}} %}
+                {% endif %}
+            {% endif %}
+
+
+            <section class="content">
+            
+                <p class="subtitle"><strong>{{ item.event }}</strong></p>
+                <div class = "column is-8">
+                    <img src="{{ item.img | relative_url }}" />
+
+                    <strong>Delivery type:</strong> {{ item.delivery_type}}<br />
+                    <strong>Trainer:</strong> {{ item.by}}<br />
+                    <strong>Dates:</strong> {{ event_date}}<br /><br />
+                    <a href="{{ item.url }}" class="button is-primary" target="_blank" rel="noopener noreferrer" >
+                        Register here!
+                    </a>
+                </div>
+
+            </section>
+        {% endif %}
+    {% endif %}
+{% endfor %}

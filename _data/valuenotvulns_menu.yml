@@ -1,0 +1,12 @@
+- label: Course Overview
+  items:
+    - name: High level course explanation
+      link: /training-courses/valuenotvulns.html
+    - name: Summary of topics covered
+      link: /training-courses/valuenotvulns/topics.html
+    - name: Participant Feedback
+      link: /training-courses/valuenotvulns/feedback.html
+    - name: Audio/Visual information about the course
+      link: /training-courses/valuenotvulns/audiovisual.html
+    - name: Where you can attend the course
+      link: /training-courses/valuenotvulns/attend.html

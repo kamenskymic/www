@@ -105,3 +105,10 @@ defaults:
     values:
       call_link: mailto:info@bouncesecurity.com
       call_text: Let's speak about this!
+  -
+    scope:
+      path: "training-courses"
+      type: "pages"
+    values:
+      call_link: mailto:info@bouncesecurity.com
+      call_text: Let's speak about this!

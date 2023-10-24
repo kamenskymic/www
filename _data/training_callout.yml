@@ -24,4 +24,4 @@ items:
     description: >
       I want to understand how to get better value from SAST, DAST and SCA tools
     call_to_action_name: Read More
-    call_to_action_link: /training-courses/appsecscanning/
+    call_to_action_link: /training-courses/valuenotvulns/
