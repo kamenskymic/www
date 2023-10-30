@@ -28,6 +28,18 @@ items:
     delivery_type: In-person
     info:
 
+  - event: Virtual Training at BlackHat EU 2023
+    year: 2023
+    date: December 4-5th
+    dateval: 2023-12-04
+    title: Building a High-Value AppSec Scanning Programme (SCA, SAST, DAST and More)
+    img: assets/img/BHEU23.jpg
+    url: https://www.blackhat.com/eu-23/training/schedule/index.html#building-a-high-value-appsec-scanning-programme-sca-sast-dast-and-more-virtual-33767
+    by: Josh Grossman
+    course_name: valuenotvulns
+    delivery_type: Virtual
+    info:
+
   - event:  DeveloperWeek Enterprise 2023
     dateval: 2023-11-16
     title: Discover Your Inner Security Engineer with This One Weird Trick (Hackers Hate It!)
