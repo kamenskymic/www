@@ -249,11 +249,20 @@ items:
     by: Michal Kamensky
     info:
 
- - event:  NDC Security 2023 (Conference)
+  - event:  NDC Security 2023 (Conference)
     dateval: 2023-01-19
     title: Building a sustainable security requirements process with the ASVS
     youtube: AOt_y6iZ2kI
     by: Josh Grossman
+    url: https://ndc-security.com
+    info:
+
+  - event:  OWASP Oslo
+    dateval: 2023-01-17
+    title: Tune your Toolbox for Velocity and Value
+    by: Josh Grossman
+    img: assets/img/OWASP.png
+    url: https://www.meetup.com/owasp-oslo/events/290761822/
     info:
 
   - event: OWASP Global AppSec San Francisco 2022
