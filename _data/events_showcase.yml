@@ -198,6 +198,14 @@ items:
     by: Avi Douglen
     info:
 
+  - event: OWASP Netherlands
+    dateval: 2023-04-20
+    title: The Rise of the Security Verification Standard
+    youtube: dlAY2lEnSlg
+    url: https://www.meetup.com/owasp-chapter-netherlands-meetup/events/292323208/
+    by: Josh Grossman
+    info:
+
   - event: PBC's Linkedin Live Event
     year: 2023
     date: April 18th
@@ -205,6 +213,15 @@ items:
     title: Journey to AppSec Maturity- Dialogue at RSA
     img: assets/img/Journey to Appsec Maturity.jpg
     url: https://www.linkedin.com/events/journeytoappsecmaturity-dialogu7042220687696023552/comments/
+    by: Avi Douglen
+    info:
+
+  - event:  QCon London 2023
+    dateval: 2023-03-27
+    title: Sustainable Security Requirements with the ASVS
+    by: Josh Grossman
+    img: assets/img/qconlondon.png
+    url: https://qconlondon.com/presentation/mar2023/sustainable-security-requirements-asvs
     info:
 
   - event: Security Weekly
@@ -339,17 +356,6 @@ items:
     by: Josh Grossman
     info:
     
-
-  - event: OWASP Morocco
-    year: 2022
-    date: April 12th
-    dateval: 2022-04-12
-    title: Proactively Building Secure Software
-    youtube: ctgH7umEtxg
-    embed: https://www.youtube-nocookie.com/embed/ctgH7umEtxg
-    url: ctgH7umEtxg
-    by: Josh Grossman
-    info:
 
   - event: OWASP Morocco
     year: 2022
