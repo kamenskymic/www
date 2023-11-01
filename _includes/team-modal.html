@@ -23,10 +23,16 @@
                 {% include contacts.html contacts=teammember.contacts %}
                 <div class="content">
                     {{ include.teammember.content }}
+                    {% assign link_text_temp = include.teammember.title | append: "'s upcoming events" %}
+                    {% include wherecanyousee.html show_events = "future" url = include.teammember.id link_text = link_text_temp by_name = include.teammember.title fragment = "events" %}
+                    {% assign link_text_temp = include.teammember.title | append: "'s previous appearances" %}
+                    {% include wherecanyousee.html show_events = "past" url = include.teammember.id link_text = link_text_temp by_name = include.teammember.title fragment = "prevevents" %}
                 </div>
                 
                 <div class="content"></div>
+                
             </div>
+            
         </div>
     
        

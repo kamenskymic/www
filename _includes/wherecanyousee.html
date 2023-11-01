@@ -1,0 +1,50 @@
+<!--    This is based on the original footer file
+        https://github.com/chrisrhymes/bulma-clean-theme/blob/5efd9b84fb5f727f5918a5a3e60036c2d058772d/_includes/showcase.html
+-->
+
+    {% assign showcase = site.data.["events_showcase"].items %}
+    
+    {% assign first_item = true %}
+
+    {% for item in showcase %}
+
+        {% assign process_event = true %}
+        
+        {% if include.show_events %}
+            
+            {% assign today_date = 'now' | date: '%s' %}
+            {% assign event_date = item.dateval | date: '%s' %}
+
+            {% if include.show_events == "future" %}
+                {% if event_date < today_date %}
+                    {% assign process_event = false %}
+                {% endif %}
+            {% endif %}
+            {% if include.show_events == "past" %}
+                {% if event_date >= today_date %}
+                    {% assign process_event = false %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+        {% if include.by_name %}
+            {% if include.by_name != item.by %}
+                {% assign process_event = false %}
+            {% endif %}
+        {% endif %}
+
+        <section class="content">
+        {% if process_event == true %}
+
+            
+                {% if include.link_text %}
+                    {% if first_item == true %}
+                        <p class="title is-4">{{include.showcase_title}}</p>
+                        <a href="{{include.url}}.html#{{include.fragment}}">{{include.link_text}}</a>
+                        {% assign first_item = false %}
+                    {% endif %}        
+                {% endif %}
+            </section>
+        {% endif %}
+    {% endfor %}
+

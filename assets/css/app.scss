@@ -43,10 +43,13 @@ $body-family: 'Ubuntu', 'Nunito Sans', Calibri, Verdana, Segoe, Arial, sans-seri
 }
 
 // Since the menubar is fixed, we need to add a margin when we jump/internal link to the 
-// h3 headings, for example when using a table of contents. Otherwise the jumped to heading
+// h3 headings and for divs, for example when using a table of contents. Otherwise the jumped to heading
 // will be covered by the menu bar.
 h3 {
 	scroll-margin-top: 2.5em;
+}
+div {
+	scroll-margin-top: 3.5em;
 }
 
 // Without this, the modal will go wider than a mobile screen.

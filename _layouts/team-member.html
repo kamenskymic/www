@@ -37,6 +37,15 @@ title: Fred
         {% endif %}
         <br>
         <a href="/team">Back to <strong>Our Team</strong></a>
+        
+    </div>
+    <div class="column is-12" id="events">
+        {% assign showcase_title_concat = page.title | append: "'s upcoming events:" %} 
+        {% include showcasemanual.html showcase = "events_showcase" show_events = "future" by_name = page.title showcase_title = showcase_title_concat %}
+    </div>
+    <div class="column is-12" id="prevevents">
+        {% assign showcase_title_concat = page.title | append: "'s previous appearances:" %} 
+        {% include showcasemanual.html showcase = "events_showcase" show_events = "past" by_name = page.title  showcase_title = showcase_title_concat %}
     </div>
 
 </div>

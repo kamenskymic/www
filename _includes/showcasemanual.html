@@ -1,0 +1,4 @@
+
+{% assign showcase = site.data.[include.showcase].items | sort:"dateval" %}
+{% include showcase_include.html showcase_in = showcase show_events = include.show_events by_name = include.by_name showcase_title = include.showcase_title %}
+
