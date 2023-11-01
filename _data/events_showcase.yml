@@ -50,7 +50,7 @@ items:
   
   - event:  ThreatModCon 2023
     dateval: 2023-10-29
-    title: Threat Modeling
+    title: The Threats to Our Community
     img: assets/img/ThreatModCon2023.png
     url: https://www.threatmodelingconnect.com/events/threatmodcon-2023-38
     by: Avi Douglen
