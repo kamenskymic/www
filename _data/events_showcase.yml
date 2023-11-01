@@ -249,6 +249,13 @@ items:
     by: Michal Kamensky
     info:
 
+ - event:  NDC Security 2023 (Conference)
+    dateval: 2023-01-19
+    title: Building a sustainable security requirements process with the ASVS
+    youtube: AOt_y6iZ2kI
+    by: Josh Grossman
+    info:
+
   - event: OWASP Global AppSec San Francisco 2022
     year: 2022
     date: November 18th
