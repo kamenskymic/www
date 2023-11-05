@@ -35,9 +35,9 @@
         {% endif %}
 
         {% if include.by_name %}
-            {% if include.by_name != item.by %}
+            {% unless item.by contains include.by_name %}
                 {% assign process_event = false %}
-            {% endif %}
+            {% endunless %}
         {% endif %}
 
         {% if process_event == true %}
@@ -50,14 +50,14 @@
             {% endif %}
 
 
-            <section class="showcase">
+            
                 {% if include.showcase_title %}
                     {% if first_item == true %}
                         <p class="title is-4">{{include.showcase_title}}</p>
                         {% assign first_item = false %}
                     {% endif %}        
                 {% endif %}
-
+            <section class="showcase">
 
                 <div class="showcase-content">
                     <div class="columns is-centered">
