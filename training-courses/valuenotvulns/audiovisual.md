@@ -15,7 +15,7 @@ toc_title: Audio/Visual information about the course
 **[Back to top ↑](#top)**
 
 In this short video, I give a quick explanation of the course and the ideas around it.
-{% include youtube.html video="_fzC-xmtwHc" %}
+{% include youtube.html video="_PqwBzTOY1A" %}
 
 ### Quick overview of the background to the course (~10 mins)
 
