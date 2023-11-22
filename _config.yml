@@ -85,6 +85,7 @@ collections:
 
 exclude:
     - README.md
+    - localrun.bat
 
 include:
     - _headers
