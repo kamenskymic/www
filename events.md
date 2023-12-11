@@ -10,3 +10,5 @@ sort: year
 show_events: future
 hero_height: is-small
 ---
+
+#### That's all for now but check out the [list of events that we were previously at](/eventspast)!

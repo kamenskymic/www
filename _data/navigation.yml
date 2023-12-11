@@ -8,7 +8,11 @@
 - name: Who are we
   link: /team/
 - name: Where we were
+  link: /eventspast/
+  condition: past
+- name: Where we'll be
   link: /events/
+  condition: future
 # This can be added back in when we have blog posts
 #- name: Blog
 # link: /blog/

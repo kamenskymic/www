@@ -30,7 +30,29 @@
                         </div>
                     </div>
                     {% else %}
-                    <a href="{{ item.link | relative_url }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                        {% assign show_item = true %}                        
+                        {% if item.condition %}
+                            {% assign showcase_name = 'events_showcase' %}
+                            {% assign last_event = site.data.[showcase_name].items | sort:"dateval" | reverse | first %}
+                            
+                            {% assign today_date = 'now' | date: '%s' %}
+                            {% assign last_date = last_event.dateval | date: '%s' %}
+
+                            {% if item.condition == "future" %}
+                                {% if last_date < today_date %}
+                                    {% assign show_item = false %}
+                                {% endif %}
+                            {% endif %}
+                            {% if item.condition == "past" %}
+                                {% if last_date >= today_date %}
+                                    {% assign show_item = false %}
+                                {% endif %}
+                            {% endif %}
+
+                        {% endif %}    
+                        {% if show_item == true %}
+                            <a href="{{ item.link | relative_url }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                        {% endif %}    
                     {% endif %}
                 {% endfor %}
                 {% endif %}
