@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<!--
+    https://github.com/chrisrhymes/bulma-clean-theme/blob/901ea188ec7f5e395e8286626a2a6c777a38bf39/_layouts/post.html
+-->
+
+
+<div class="content content-blog">
+  
+    <p>{% include postauthor.html %}</p>
+    
+
+    {% if page.series %}
+        {% include series.html %}
+    {% endif %}
+
+    {{ content }}
+</div>
+
+<div class="tags">
+    {% for tag in page.tags %}
+      {% include tag.html tag=tag %}
+    {% endfor %}
+</div>
+
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
+
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %}
