@@ -3,7 +3,7 @@ title: Michal Kamensky
 subtitle: Associate Security Consultant
 layout: team-member
 hero_height: is-small
-img: /assets/img/MichalK1.jpg
+img: /assets/img/MichalK1.png
 sort_order: 5
 contacts:
     - label: Michal's LinkedIn profile
