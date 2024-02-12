@@ -1,5 +1,13 @@
 items:
 
+  - event:  (ISC)2 Meetup February 2023
+    dateval: 2023-02-02
+    title: "The Real AppSec Issues"
+    img: assets/img/isc2meetup.jpg
+    url: https://www.eventbrite.com/e/isc2-application-security-event-with-checkmarx-and-bounce-security-tickets-473968050197
+    by: Josh Grossman
+    info:
+
   - event:  NDC Security 2024 (Conference)
     dateval: 2024-01-11
     title: "No Size Fits All: Empowering Engineers with Custom Application Security tests"
