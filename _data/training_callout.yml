@@ -25,3 +25,10 @@ items:
       I want to understand how to get better value from SAST, DAST and SCA tools
     call_to_action_name: Read More
     call_to_action_link: /training-courses/valuenotvulns/
+
+  - title: Accurate and Scalable: Web Application Bug Hunting
+    icon: fa-binoculars
+    description: >
+      I want to learn how to automate my research while keeping it customized
+    call_to_action_name: Read More
+    call_to_action_link: /training-courses/bughunting/
