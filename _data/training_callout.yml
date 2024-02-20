@@ -26,6 +26,14 @@ items:
     call_to_action_name: Read More
     call_to_action_link: /training-courses/valuenotvulns/
 
+  - title: Hacking your Product Security Programme for Velocity and Value
+    #subtitle: Example subtitle 2
+    icon: fa-chart-line
+    description: >
+      I want to build an effective and responsive product security programme
+    call_to_action_name: Read More
+    call_to_action_link: /training-courses/accelerated/
+
   - title: "Accurate and Scalable: Web Application Bug Hunting"
     icon: fa-binoculars
     description: >
