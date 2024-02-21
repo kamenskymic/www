@@ -12,9 +12,21 @@ items:
     delivery_type: Virtual
     info: 
 
-  - event: Training at BlackHat USA 2024
+  - event: Training at BlackHat USA 2024 - Session 2
     year: 2024
-    date: August 3rd-6th
+    date: August 5rd-6th
+    dateval: 2024-08-05
+    title: "Accurate and Scalable: Web Application Bug Hunting"
+    img: assets/img/blackHat.png
+    url: https://www.blackhat.com/us-24/training/schedule/index.html#accurate-and-scalable-web-application-bug-hunting-372101705524544
+    by: Michal Kamensky
+    course_name: bughunting
+    delivery_type: In-person
+    info:
+
+  - event: Training at BlackHat USA 2024 - Session 1
+    year: 2024
+    date: August 3rd-4th
     dateval: 2024-08-03
     title: "Accurate and Scalable: Web Application Bug Hunting"
     img: assets/img/blackHat.png
