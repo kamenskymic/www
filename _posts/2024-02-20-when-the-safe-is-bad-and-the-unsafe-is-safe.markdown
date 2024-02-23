@@ -105,7 +105,7 @@ Here is Tomer's code so that you can try it yourself in the console:
 function prepare(strings, ...values){
   console.log({query: strings.join("?"), values: values});
 }
-prepare`SELECT * FROM "users" WHERE username = ${'admin'}
+prepare`SELECT * FROM "users" WHERE username = ${'admin'}`
 ```
 
 (Note that the Node.js security maven [Liran Tal](https://www.nodejs-security.com/) also provided a nice answer which I removed because I didn't want to spoil things 🤣)
