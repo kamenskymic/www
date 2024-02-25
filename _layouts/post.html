@@ -9,14 +9,17 @@ layout: default
 
 <div class="content content-blog">
   
-    <p>{% include postauthor.html %}</p>
-    
-
     {% if page.series %}
         {% include series.html %}
     {% endif %}
 
+    <p>{% include postauthor.html %}</p>
+
     {{ content }}
+
+    {% if page.series %}
+        {% include seriesfooter.html %}
+    {% endif %}
 </div>
 
 <div class="tags">

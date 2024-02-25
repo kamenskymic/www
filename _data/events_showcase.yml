@@ -88,12 +88,12 @@ items:
     by: Avi Douglen
     info:
 
-  - event: Training at BlackHat USA
+  - event: Training at BlackHat USA 2023
     year: 2023
     date: August 7-8th
     dateval: 2023-08-07
     title: Building a High-Value AppSec Scanning Programme (SCA, SAST, DAST and More)
-    img: assets/img/blackHat.png
+    img: assets/img/BHUSA23.jpg
     url: https://www.blackhat.com/us-23/training/schedule/index.html#building--a-high-value-appsec-scanning-programme-sca-sast-dast-and-more-30622 
     by: Josh Grossman
     info:

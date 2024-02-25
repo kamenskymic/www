@@ -1,0 +1,14 @@
+title: "So you want to train at Black Hat (or other conferences)?"
+description: | 
+    This is a series of articles about our experiences submitting, preparing and delivering training at Black Hat (and other conferences as well).
+    <br /><br />
+    It has been quite the journey and it feels like we learnt a lot of things which were not obvious to us at the beginning or were just not documented.
+    <br /><br />
+    In this series, we will try to set this information out in an organized way to hopefully help people in the future who are interested in going through a similar journey.
+    <br /><br />
+    <strong>This series is ongoing</strong> with new posts released every few weeks. If you want to keep up with new posts, follow us on <a href="https://twitter.com/BounceSecurity/" target="_blank">Twitter</a> or <a href="https://www.linkedin.com/company/bounce-security/" target="_blank">LinkedIn</a>.
+sections:
+  - label: 
+    items:
+      - title: "So, you want to train at Black Hat? An Introduction"
+      - title: "What is my motivation? What should your motivation be?"

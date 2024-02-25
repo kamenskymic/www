@@ -1,24 +1,27 @@
 <div class="card">
-    {% if post.image %}
-    {% else %}
+
     <header class="card-header">
-        <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
+        <a class="card-header-title title is-5" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
     </header>
-    {% endif %}
+  
     <div class="card-content">
         <div class="content">
-            {% if post.image %}
-            <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-            {% endif %}
+
             {% if post.summary %}
                 {{ post.summary | markdownify }}
             {% else %}
                 <p>{{ post.excerpt }}</p>
             {% endif %}
-        </div>
+        
+        {% if post.series %}
+                {% assign series = site.data.[post.series] %}
+                {% assign firstpost = site.posts | where: "title", series.sections[0].items[0].title %}
+                <strong>This post is part of a series:</strong> <a href="{{ firstpost[0].url }}">{{ series.title }}</a>
+        {% endif %}
+    </div>
         {% if post.image %}
         <div class="card-image">
-            <a href="{{ site.baseurl }}{{ post.url }}"> <img src="{{ post.image }}" alt="{{ post.title }}"></a>
+            <a href="{{ site.baseurl }}{{ post.url }}"> <img class="card-image-inner" src="{{ post.image }}" alt="{{ post.title }}"></a>
         </div>
         {% endif %}
         <div class="has-text-centered">

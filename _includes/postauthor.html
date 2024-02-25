@@ -20,7 +20,7 @@
 {% for teammember in teammembers %}
 
     {% if authormd == teammember.name %}
-        Published on {{ postdate | date: "%-d %B %Y" }} by <a href="/team-members/{{ authorhtml }}"> {{ teammember.title }}</a>
+        Published on {{ postdate | date: "%-d %B %Y" }} by&nbsp;<a href="/team-members/{{ authorhtml }}"> {{ teammember.title }}</a>
     {% endif %}
 
 {% endfor %}

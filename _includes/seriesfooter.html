@@ -1,0 +1,36 @@
+<!--
+    Based on: https://github.com/chrisrhymes/bulma-clean-theme/blob/901ea188ec7f5e395e8286626a2a6c777a38bf39/_includes/series.html
+-->
+
+{% assign series = site.data.[page.series] %}
+{% assign posts = site.posts %}
+<hr>
+{% assign firstpost = site.posts | where: "title", series.sections[0].items[0].title %}
+<p><i><strong>This post is part of a series:</strong> <a href="{{ firstpost[0].url }}">{{ series.title }}</a></i></p>
+
+<p class="title is-6"><i>Other posts in this series:</i></p>
+
+{% for section in series.sections %}
+
+{% if section.label %}
+    <p class="title is-6"><i>{{ section.label }}</i></p>
+{% endif %}
+
+<ul class="block-list is-small is-outlined">
+    {% for item in section.items %}
+        {% assign post = posts | where: "title", item.title %}
+
+        {% if page.url == post[0].url %}
+            <li class="is-highlighted is-dark">
+                <p>{{ item.title }}</p>
+            </li>
+        {% else %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post[0].url }}" class="is-flex" >{{ item.title }}</a>
+            </li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+{% endfor %}
+
