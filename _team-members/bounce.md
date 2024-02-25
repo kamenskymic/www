@@ -12,8 +12,8 @@ contacts:
 
 ---
 
-Bounce Security was founded in 2017 by Avi Douglen on the security and consulting aspect, alongside Maya on the organizational side. Over time, the team grew and now includes Josh as CTO and Michal as a Junior Analysts. The company makes sure to have a warm and caring environment, whilst staying professional. 
+Bounce Security was founded in 2017 by Avi Douglen on the product security and consulting aspect, alongside Maya on the organizational side. Over time, the team grew and now includes Josh as CTO and Michal as an Associate Security Consultant. The company makes sure to have a warm and caring environment, whilst staying professional. 
 
-Bounce Security consults on software security to development teams of all sizes, working with them to integrate security practices into their process. We’ve worked with some of the biggest organizations on their application security, as well as small startups. We prefer to work directly with development teams, often providing training on secure coding and other security topics. Software security, development processes, identity architecture, and access management are our specialties. 
+Bounce Security consults on product security to development teams of all sizes, working with them to integrate security practices into their product development process. We’ve worked with some of the biggest organizations on their product security, as well as small startups. We prefer to work directly with development teams, often providing training on secure coding and other security topics. Product security, development processes, identity architecture, and access management are our specialties. 
 
 We bring this technical expertise to your table and merge it with a business perspective to ensure you get the maximum bang for your security buck. 

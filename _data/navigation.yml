@@ -1,9 +1,9 @@
-- name: How we can help you
+- name: How we add value
   link: /#
   dropdown:
-  - name: Value-driven Security Services  
+  - name: Product Security Services  
     link: /services/
-  - name: Software Security Training
+  - name: Product Security Training
     link: /training/
 - name: Who are we
   link: /team/

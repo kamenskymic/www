@@ -2,18 +2,18 @@
 style: is-light
 height: is-medium
 items:
-  - title: Security Roadmapping
+  - title: Product Security Roadmapping
     #subtitle: Example subtitle 1
     icon: fa-map
     description: >
-      I need help planning a new or expanded Application/Product Security programme
+      I need help planning a new or expanded Product Security or Application Security Security programme
     call_to_action_name: Read More
     call_to_action_link: /service-details/roadmapping/
-  - title: Software Security Consulting
+  - title: Product Security Consulting
     #subtitle: Example subtitle 2
     icon: fa-users
     description: >
-      I need assistance with my existing Application/Product Security programme
+      I need assistance with my existing Product Security or Application Security programme
     call_to_action_name: Read More
     call_to_action_link: /service-details/consulting/
   - title: Managed Security Champions Programme
