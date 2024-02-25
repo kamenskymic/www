@@ -1,5 +1,13 @@
 items:
 
+  - event: "Reveal the Security Risks in the software Development Lifecycle Meetup"
+    dateval: 2024-03-06
+    title: "Talk title: The Real AppSec Issues"
+    img: assets/img/appsecrisks2.jpg
+    url: https://us06web.zoom.us/webinar/register/WN_9bj4neFRSlqS_o0L5ADijw
+    by: Josh Grossman
+    info: 
+
   - event: Training at BlackHat USA 2024
     year: 2024
     date: August 5rd-6th
@@ -38,7 +46,7 @@ items:
 
   - event:  (ISC)2 Meetup February 2023
     dateval: 2023-02-02
-    title: "The Real AppSec Issues"
+    title: "Talk title: The Real AppSec Issues"
     img: assets/img/isc2meetup.jpg
     url: https://www.eventbrite.com/e/isc2-application-security-event-with-checkmarx-and-bounce-security-tickets-473968050197
     by: Josh Grossman
