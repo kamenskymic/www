@@ -35,7 +35,7 @@ items:
     date: August 5rd-6th
     dateval: 2024-08-05
     title: Accelerated AppSec – Hacking your Product Security Programme for Velocity and Value (Virtual)
-    img: assets/img/blackHat.png
+    img: assets/img/events/blackhatlogo2024.png
     url: https://www.blackhat.com/us-24/training/schedule/index.html#accelerated-appsec--hacking-your-product-security-programme-for-velocity-and-value-virtual-37218
     by: Josh Grossman
     course_name: accelerated
@@ -47,7 +47,7 @@ items:
     date: August 5rd-6th
     dateval: 2024-08-05
     title: "Accurate and Scalable: Web Application Bug Hunting"
-    img: assets/img/blackHat.png
+    img: assets/img/events/blackhatlogo2024.png
     url: https://www.blackhat.com/us-24/training/schedule/index.html#accurate-and-scalable-web-application-bug-hunting-372101705524544
     by: Michal Kamensky
     course_name: bughunting
@@ -59,7 +59,7 @@ items:
     date: August 3rd-4th
     dateval: 2024-08-03
     title: "Accurate and Scalable: Web Application Bug Hunting"
-    img: assets/img/blackHat.png
+    img: assets/img/events/blackhatlogo2024.png
     url: https://www.blackhat.com/us-24/training/schedule/index.html#accurate-and-scalable-web-application-bug-hunting-37210
     by: Michal Kamensky
     course_name: bughunting
