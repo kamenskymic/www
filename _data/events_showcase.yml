@@ -1,4 +1,26 @@
 items:
+  - event: Training at OWASP Global AppSec Lisbon 2024
+    year: 2024
+    date: June 25th-26th
+    dateval: 2024-06-25
+    title: Building a High-Value AppSec Scanning Programme
+    img: assets/img/events/lisbon.jpg
+    url: https://www.eventbrite.com/e/owasp-global-appsec-lisbon-2024-tickets-750689411237
+    by: Josh Grossman
+    course_name: valuenotvulns
+    delivery_type: In-Person
+    info: 
+
+  - event: Training at OWASP Global AppSec Lisbon 2024
+    year: 2024
+    date: June 25th-26th
+    dateval: 2024-06-25
+    title: Practical Privacy by Design - Building secure applications that respect privacy
+    img: assets/img/events/lisbon.jpg
+    url: https://www.eventbrite.com/e/owasp-global-appsec-lisbon-2024-tickets-750689411237
+    by: Avi Douglen with Dr. Kim Wuyts
+    delivery_type: In-Person
+    info: 
 
   - event: "Reveal the Security Risks in the software Development Lifecycle Meetup"
     dateval: 2024-03-06

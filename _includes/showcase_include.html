@@ -76,8 +76,12 @@
                             <p class="subtitle">{{ item.title }}</p>
 
                             <div class="content content-center">
-                                <!--<p>{{ item.description | markdownify }}</p>-->
-                                {{item.by}} - {{event_date}}
+                                
+                                {{item.by}} - {{event_date}}<br/>
+                                {%if item.course_name %}
+                                (<a href="/training-courses/{{item.course_name}}" target="_blank">Read more about this course</a>)
+                                {% endif %}
+                                
                             </div>
 
                             <a href="{{ item.url }}" class="button is-primary" target="_blank" rel="noopener noreferrer" >
