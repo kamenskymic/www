@@ -22,7 +22,7 @@ items:
     delivery_type: In-Person
     info: 
 
-  - event: "Reveal the Security Risks in the software Development Lifecycle Meetup"
+  - event: "Cyber Security Virtual Meetups"
     dateval: 2024-03-06
     title: "Talk title: The Real AppSec Issues"
     img: assets/img/appsecrisks2.jpg
