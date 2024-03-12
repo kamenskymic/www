@@ -13,6 +13,10 @@ image: /assets/img/2024-02-20-unsafe/dangerous.png
 
 <base target="_blank">
 
+### Update 2024-03-12:
+
+I am currently investigating situations where `$queryRaw` is in fact not safe. I will update with my findings when I have them but I have clarified below for now.
+
 ## Introduction
 
 Product Security is hard. There are a huge number of different things you think about at the same time, while still being able to identify the most serious and urgent issues.
@@ -118,11 +122,13 @@ The Prisma documentation [helpfully explains this as well](https://www.prisma.io
 
 ## So we're safe?
 
-This is the only way of using that function, so that means that this function is secure, right? Well yes so it would seem, and Tomer assures me that you can't use this function unsafely from an SQL injection perspective - and if anyone should know about making a safe function into an unsafe function, a CTF expert would.
+This is the only way of using that function, so that means that this function is secure, right? Well yes so it would seem, and Tomer assures me that you can't use this code unsafely from an SQL injection perspective - and if anyone should know about making a safe function into an unsafe function, a CTF expert would.
 
 On the other hand, it still bothers me that the query *looks* unsafe. Also, because it hides why it is safe behind a specific JavaScript feature, I do worry that it is not clear *why* it is safe, and therefore it might not be clear why this sort of syntax would not be safe in other contexts.
 
 Nevertheless, if you are looking for a simple way of writing of writing dynamic but safe queries using Prisma, this is a great option.
+
+(**Update 2024-03-12:** I am currently investigating situations where `$queryRaw` is in fact not safe. I will update with my findings when I have them but for now you should exercise caution where a tagged template is passed to the `$queryRaw` function as a variable.)
 
 ## Making the recommendation
 
@@ -204,6 +210,7 @@ A few key conclusions I think.
 
 - Most developers have had a bad experience with security people, being able to bridge this divide means being able to speak their language and provide them with realistic solutions.
 - Wherever possible, I'd like to provide a simple and ideal solution, like `$queryRaw`.
+  - **Update 2024-03-12:** I am currently investigating situations where `$queryRaw` is in fact not safe. I will update with my findings when I have them but for now you should exercise caution where a tagged template is passed to the `$queryRaw` function as a variable.
 - However, the ideal solution is not always possible and product security people will need to be ready to find alternatives, secure the alternatives, and to choose their battles.
 - This also means that automated scanning which doesn't understand this context will probably provide the wrong answer.
 
