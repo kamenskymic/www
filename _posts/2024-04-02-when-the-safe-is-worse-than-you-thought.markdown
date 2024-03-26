@@ -154,7 +154,9 @@ So where does this leave us? This updated code is safe at the moment but it coul
 
 This type of dynamic query building will always need to be done with caution, with careful attention being paid to how the queries are being built. If the dynamic queries are being built programmatically, hopefully you can be more confident that this treatment is being correctly applied. If developers are still manually building these dynamic queries one by one, you may have more reason for concern
 
-In the meantime, I submitted some quite extensive updates to the Prisma documentation to hopefully make these considerations clearer. (Thanks to the team at Prisma for being open to my suggestions 😀)
+In the meantime, I submitted some quite extensive updates to the Prisma documentation to hopefully make these considerations clearer. You can see the updated documentation [at this link](https://www.prisma.io/docs/orm/prisma-client/queries/raw-database-access/raw-queries#sql-injection-prevention).
+
+(Thanks to the team at Prisma for being open to my suggestions 😀)
 
 ## In conclusion
 
