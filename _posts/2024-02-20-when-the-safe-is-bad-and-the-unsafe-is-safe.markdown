@@ -9,9 +9,8 @@ author: josh
 summary: |
     Product Security is hard. There are a huge number of different things you think about at the same time, while still being able to identify the most serious and urgent issues.
 image: /assets/img/2024-02-20-unsafe/dangerous.png
+series: prisma_series
 ---
-
-<base target="_blank">
 
 ### Update 2024-03-12:
 
