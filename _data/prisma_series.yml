@@ -1,0 +1,12 @@
+title: "Fun with SQL injection in Prisma ORM!"
+description: | 
+    This is a mini-series about a how we deep-dived into SQL injection prevention.
+    <br /><br />
+    It led to us learning a lot about JavaScript/Typescript, discovering just how clever developers are, highlighting some useful lessons about Product Security, and also getting the Prisma ORM documentation changed.
+    <br /><br />
+    Hopefully this will be an interesting insight into some real life Product Security challengess.
+sections:
+  - label: 
+    items:
+      - title: "When the \"safe\" is bad and the \"unsafe\" is safe."
+      - title: "When the \"safe\" is worse than you thought"
