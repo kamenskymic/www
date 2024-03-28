@@ -44,7 +44,7 @@ But, as I said above, I had underestimated developers...
 
 (Developers clearly make the best hackers!)
 
-They came up something like this stunning piece of code which got me scratching my head as to why on earth it worked.
+They came up with something like this stunning piece of code which got me scratching my head as to why on earth it worked.
 
 ```js
 import { PrismaClient } from '@prisma/client'
@@ -81,7 +81,7 @@ A Tagged Template has a property called raw and through the use of the any keywo
 
 ### A simpler bypass
 
-In fact, it turns out that you don't even need to go to this much effort. Prisma supplies a helper method called raw which pretty much does this for you but for the Sql type so now making this function unsafe is a simple as the following code.
+In fact, it turns out that you don't even need to go to this much effort. Prisma supplies a helper method called raw which pretty much does this for you but for the Sql type so now making this function unsafe is as simple as the following code.
 
 ```ts
 import { Prisma, PrismaClient } from '@prisma/client'
