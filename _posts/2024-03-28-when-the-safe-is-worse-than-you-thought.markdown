@@ -2,7 +2,7 @@
 layout: post
 title:  "When the \"safe\" is worse than you thought"
 subtitle: "Yet another day in Product Security, this one more painful"
-date:   2024-03-02 09:19:21 +0300
+date:   2024-03-28 12:45:21 +0300
 categories: blog
 hero_height: is-small
 author: josh

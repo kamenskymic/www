@@ -12,9 +12,11 @@ image: /assets/img/2024-02-20-unsafe/dangerous.png
 series: prisma_series
 ---
 
-### Update 2024-03-12:
+### Update 2024-03-28:
 
-I am currently investigating situations where `$queryRaw` is in fact not safe. I will update with my findings when I have them but I have clarified below for now.
+_It turns out that there are also situations where `$queryRaw` and `$executeRaw` are actually not safe 🤦‍♂️. You can read the full story in the [second post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html)._
+
+_I think the original point of this post still stands but I have added some clarifications marked with "**Update:**" below._
 
 ## Introduction
 
@@ -121,13 +123,13 @@ The Prisma documentation [helpfully explains this as well](https://www.prisma.io
 
 ## So we're safe?
 
-This is the only way of using that function, so that means that this function is secure, right? Well yes so it would seem, and Tomer assures me that you can't use this code unsafely from an SQL injection perspective - and if anyone should know about making a safe function into an unsafe function, a CTF expert would.
+~~This is the only way of using that function, so that means that this function is secure, right? Well yes so it would seem.~~
+
+_**Update:** As long as we are using the query like this, with the query text included as we call the function then yes this is safe. However, there are situations where you can make it unsafe as you can see in the [second post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html)._
 
 On the other hand, it still bothers me that the query *looks* unsafe. Also, because it hides why it is safe behind a specific JavaScript feature, I do worry that it is not clear *why* it is safe, and therefore it might not be clear why this sort of syntax would not be safe in other contexts.
 
-Nevertheless, if you are looking for a simple way of writing of writing dynamic but safe queries using Prisma, this is a great option.
-
-(**Update 2024-03-12:** I am currently investigating situations where `$queryRaw` is in fact not safe. I will update with my findings when I have them but for now you should exercise caution where a tagged template is passed to the `$queryRaw` function as a variable.)
+Nevertheless, if you are looking for a simple way of writing of writing dynamic but safe queries using Prisma, this is a great option (_**Update:** if you follow the guidance for using this securely in the [second post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html)_). 
 
 ## Making the recommendation
 
@@ -145,15 +147,15 @@ So yes that's a first key takeaway here, that writing raw queries like this shou
 
 ### Right here, right now
 
-But there's another problem. This function will only ever take a raw string. Nothing else. If you try and pass it a string variable it will parameterize it and your query will break. In short, this function is only usable if your use case allows you to write your raw query in text, right there, as you use that function. 
+But there's another problem. This function will only ever take a raw string. Nothing else. If you try and pass it a string variable it will parameterize it and your query will break. ~~In short, this function is only usable if your use case allows you to write your raw query in text, right there, as you use that function.~~  
 
-If your use case requires you to build that query string, or even start building that query string somewhere else, you cannot use this function.
+If your use case requires you to build that query string, or even start building that query string somewhere else, ~~you cannot use this function~~ _**Update:** using this function gets a lot more complex and potentially dangerous_.
 
-I repeat, you **cannot** use this function.
+~~I repeat, you **cannot** use this function.~~
 
-If you insist that a developer uses this function in that scenario, they will either dismiss you as not knowing what you're talking about, or they will waste time trying and failing to make this work, and *then* decide you don't know what you're talking about and be annoyed for having wasted time.
+If you insist that a developer uses this function in that scenario, they will either dismiss you as not knowing what you're talking about, or they will waste time trying and failing to make this work, and *then* decide you don't know what you're talking about and be annoyed for having wasted time, (_**Update:** or they will come up with a crazy work around that ends up being insecure!_)
 
-So let's say that in the developer's use case, they need to build query strings dynamically. You can tell them to use variables and parameter markers (like `?` or `$1`, `$2` depending on the database) instead of string concatenation, but they still won't be able to use this function.
+So let's say that in the developer's use case, they need to build query strings dynamically. You can tell them to use variables and parameter markers (like `?` or `$1`, `$2` depending on the database) instead of string concatenation, but they still won't be able to use this function, (_**Update:** in a straightforward and secure way._)
 
 ### So what are we going to recommend?
 
@@ -199,7 +201,7 @@ The bottom line is that this function can be used safely but can also be used un
 
 ### Finally we have our recommendation
 
-So having read all of this, you are now in a position to make recommendations to developers in a particular usage scenario. As a software security person, you either need to be prepared to do this research or be able to coach and convince your developers to be able to do it for themselves. Obviously this is just one of the many questions which is likely to come up over the course of your day. Did I mention that software security is hard? 
+So having read all of this (_**Update:** and if you read the guidance in the [second post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html)_), you are now in a position to make recommendations to developers in a particular usage scenario. As a software security person, you either need to be prepared to do this research or be able to coach and convince your developers to be able to do it for themselves. (_**Update:** You also need to be ready to discover that documentation is incomplete and that you have to come up with your own solution._) Obviously this is just one of the many questions which is likely to come up over the course of your day. Did I mention that software security is hard? 
 
 ## In conclusion
 
@@ -208,8 +210,8 @@ So hopefully this has been a useful thought exercise about the day to day consid
 A few key conclusions I think.
 
 - Most developers have had a bad experience with security people, being able to bridge this divide means being able to speak their language and provide them with realistic solutions.
-- Wherever possible, I'd like to provide a simple and ideal solution, like `$queryRaw`.
-  - **Update 2024-03-12:** I am currently investigating situations where `$queryRaw` is in fact not safe. I will update with my findings when I have them but for now you should exercise caution where a tagged template is passed to the `$queryRaw` function as a variable.
+- **Update:** Hopefully this post and the [next post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html) demonstrate why using the ORM's built-in query mechanism is a lot easier!
+- Wherever possible, I'd like to provide a simple and ideal solution, like `$queryRaw` _**Update:** with queries being written there and then in the function call_.
 - However, the ideal solution is not always possible and product security people will need to be ready to find alternatives, secure the alternatives, and to choose their battles.
-- This also means that automated scanning which doesn't understand this context will probably provide the wrong answer.
+- This also means that automated scanning which doesn't understand this context will probably provide the wrong answer (but more on this in a future post).
 
