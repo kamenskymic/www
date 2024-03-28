@@ -40,7 +40,11 @@ I was currently looking at a use case which required this type of dynamic query 
 
 ### Inconceivable...or is it?
 
-But, as I said above, I had underestimated developers! They came up something like this stunning piece of code which got me scratching my head as to why on earth it worked.
+But, as I said above, I had underestimated developers...
+
+(Developers clearly make the best hackers!)
+
+They came up something like this stunning piece of code which got me scratching my head as to why on earth it worked.
 
 ```js
 import { PrismaClient } from '@prisma/client'
