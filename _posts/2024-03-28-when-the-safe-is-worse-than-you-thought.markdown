@@ -63,7 +63,7 @@ const users = await prisma.$queryRaw(templateString)
 console.log(users)
 ```
 
-Headscratcher or not, this works and in the example above leads to an SQL inection vulnerability, despite using the "safe" method.
+Headscratcher or not, this works and in the example above leads to an SQL injection vulnerability, despite using the "safe" method.
 
 > **Note:** You can try the examples in this section in the [Prisma Playground](https://playground.prisma.io/examples/advanced/raw-queries/with-argument) although be aware that:
 >
