@@ -129,7 +129,7 @@ _**Update:** As long as we are using the query like this, with the query text in
 
 On the other hand, it still bothers me that the query *looks* unsafe. Also, because it hides why it is safe behind a specific JavaScript feature, I do worry that it is not clear *why* it is safe, and therefore it might not be clear why this sort of syntax would not be safe in other contexts.
 
-Nevertheless, if you are looking for a simple way of writing of writing dynamic but safe queries using Prisma, this is a great option (_**Update:** if you follow the guidance for using this securely in the [second post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html)_). 
+Nevertheless, if you are looking for a simple way of writing dynamic but safe queries using Prisma, this is a great option (_**Update:** if you follow the guidance for using this securely in the [second post in this series](/blog/2024/03/28/when-the-safe-is-worse-than-you-thought.html)_). 
 
 ## Making the recommendation
 
